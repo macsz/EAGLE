@@ -70,7 +70,7 @@ _Inference is conducted on 2x RTX 3090 GPUs at fp16 precision using the Vicuna 1
 ## Support
 EAGLE has been merged in the following mainstream LLM serving frameworks (listed in alphabetical order).
 
-- <a href="https://rocm.docs.amd.com/en/latest/">AMD ROCm</a>
+- <a href="https://rocm.blogs.amd.com/software-tools-optimization/mtp/README.html">AMD ROCm</a>
 - <a href="https://angelslim.readthedocs.io/zh-cn/latest/features/speculative_decoding/eagle.html">AngelSlim</a>
 - <a href="https://awsdocs-neuron.readthedocs-hosted.com/en/latest/libraries/nxd-inference/developer_guides/feature-guide.html#eagle-speculative-decoding">AWS NeuronX Distributed Core</a>
 - <a href="https://github.com/OpenBMB/CPM.cu">CPM.cu</a>
@@ -87,6 +87,8 @@ EAGLE has been merged in the following mainstream LLM serving frameworks (listed
 
 
 ## Update
+**2025.9.18**: EAGLE-3 is accepted to NeurIPS'25.
+
 **2025.7.23**: We strongly recommend using [SpecForge](https://github.com/sgl-project/SpecForge) for out-of-the-box training of EAGLE-3 with SGLang.
 
 **2025.3.19**: EAGLE-3 is released.
@@ -274,14 +276,11 @@ For technical details and full experimental results, please check [the paper of 
 	booktitle = {Empirical Methods in Natural Language Processing},
 	year = {2024}
 }
-@misc{li2025eagle3scalinginferenceacceleration,
-      title={{EAGLE-3}: Scaling up Inference Acceleration of Large Language Models via Training-Time Test}, 
-      author={Yuhui Li and Fangyun Wei and Chao Zhang and Hongyang Zhang},
-      year={2025},
-      eprint={2503.01840},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2503.01840}, 
+@inproceedings{li2025eagle3,
+    author = {Yuhui Li and Fangyun Wei and Chao Zhang and Hongyang Zhang},
+    title = {{EAGLE-3}: Scaling up Inference Acceleration of Large Language Models via Training-Time Test}, 
+    booktitle = {Annual Conference on Neural Information Processing Systems},
+    year = {2025}
 }
 ```
 
