@@ -155,6 +155,7 @@ pip install -r requirements.txt
 | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B)    | [Tengyunw/qwen3_8b_eagle3](https://huggingface.co/Tengyunw/qwen3_8b_eagle3) | [Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)    | [Tengyunw/qwen3_30b_moe_eagle3](https://huggingface.co/Tengyunw/qwen3_30b_moe_eagle3) |
 | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B)    | [AngelSlim/Qwen3-8B_eagle3](https://huggingface.co/AngelSlim/Qwen3-8B_eagle3) | [Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)    | [AngelSlim/Qwen3-a3B_eagle3](https://huggingface.co/AngelSlim/Qwen3-a3B_eagle3) |
 | [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B)    | [AngelSlim/Qwen3-4B_eagle3](https://huggingface.co/AngelSlim/Qwen3-4B_eagle3) | [Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-32B)    | [AngelSlim/Qwen3-32B_eagle3](https://huggingface.co/AngelSlim/Qwen3-32B_eagle3) |
+| [Qwen/Qwen3-4B-Instruct-2507](https://www.modelscope.cn/models/Qwen/Qwen3-4B-Instruct-2507)    | [Zjcxy-SmartAI/Eagle3-Qwen3-4B-Instruct-2507-zh](https://huggingface.co/Zjcxy-SmartAI/Eagle3-Qwen3-4B-Instruct-2507-zh) 
 | [Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B)    | [AngelSlim/Qwen3-1.7B_eagle3](https://huggingface.co/AngelSlim/Qwen3-1.7B_eagle3) | [Qwen/Qwen3-14B](https://huggingface.co/Qwen/Qwen3-14B)    | [AngelSlim/Qwen3-14B_eagle3](https://huggingface.co/AngelSlim/Qwen3-14B_eagle3) |
 | [Qwen/Qwen3-235B-A22B](https://huggingface.co/Qwen/Qwen3-235B-A22B)    | [nvidia/Qwen3-235B-A22B-Eagle3](https://huggingface.co/nvidia/Qwen3-235B-A22B-Eagle3) | [Qwen/Qwen3-235B-A22B](https://huggingface.co/Qwen/Qwen3-235B-A22B) | [lmsys/Qwen3-235B-A22B-EAGLE3](https://huggingface.co/lmsys/Qwen3-235B-A22B-EAGLE3) |
 | [openbmb/MiniCPM4-8B](https://huggingface.co/openbmb/MiniCPM4-8B)    | [linglingdan/Eagle3_for_MiniCPM4](https://modelscope.cn/models/linglingdan/Eagle3_for_MiniCPM4) | [allenai/OLMoE-1B-7B-0125-Instruct](https://huggingface.co/allenai/OLMoE-1B-7B-0125-Instruct)     |  [wantsleep/OLMoE_1B_7B_Eagle3](https://huggingface.co/wantsleep/OLMoE_1B_7B_Eagle3) |
@@ -247,6 +248,11 @@ Copy the modeling_basemodelname.py from the Transformers library and proceed to 
 You can test the speed of EAGLE on MT-bench using the following command. The models will be downloaded automatically and you may need to input your Hugging Face [Access Tokens](https://huggingface.co/settings/tokens) by ```huggingface-cli login```.
 ```bash
 python -m eagle.evaluation.gen_ea_answer_llama3chat --ea-model-path yuhuili/EAGLE3-LLaMA3.1-Instruct-8B --base-model-path meta-llama/Llama-3.1-8B-Instruct --use_eagle3
+```
+
+```huggingface-cli login```.
+```bash
+python -m eagle.evaluation.gen_ea_answer_qwen3 --ea-model-path /workspace/yunhai/Qwen3-4B_eagle3 --base-model-path Qwen/Qwen3-4B --use_eagle3
 ```
 If you need specific acceleration ratios, you will also need to run the following command to get the speed of vanilla auto-regression.
 ```bash
